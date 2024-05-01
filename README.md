@@ -1,13 +1,11 @@
 # CytoCoSet
 
-#[![CircleCI](https://circleci.com/gh/CompCy-lab/cytoset.svg?style=svg&circle-token=7070f7f23c7fccba6d452bcfd2ee2a1cb469a6e0)](https://circleci.com/gh/CompCy-lab/cytoset)
-
 ## Introduction
 
 CytoCoSet is a set-based encoding method, which formulates a loss function with an additional triplet term penalizing samples with similar covariates from having disparate embeddings results in per-sample representations.
 
 <p align="center">
-<img align="middle" src="./assets/overview.png" alt="CytoCoSet" width="600" />
+<img align="middle" src="./assets/overview.png" alt="CytoCoSet" width="800" />
 </p>
 
 ## Installation
@@ -23,9 +21,13 @@ pip install -r requirements.txt
 
 ### Datasets
 
--   [preeclampsia](https://zenodo.org/record/6779483#.Yrygu-zMJhF)
--   [covid](https://zenodo.org/record/6780354#.Yryxg-zMJhE)
--   [NK cell](https://zenodo.org/record/6780417#.Yry12-zMJhE)
+Please download the dataset from Zenodo and follow the instruction of data structure that shown in Zenodo webpage description.
+
+
+
+-   [Preeclampsia](https://doi.org/10.5281/zenodo.10659650)
+-   [Preterm](https://doi.org/10.5281/zenodo.10660080)
+-   [Lung Cancer](https://doi.org/10.5281/zenodo.10659930)
 
 
 ## Reproducing Results
@@ -44,29 +46,11 @@ pip install -r requirements.txt
 ```
 python test.py --model checkpoints/HVTN_model.pt --config config/model/ICS/config.json --test_pkl checkpoints/test_sample.pkl
 ```
-The evaluation results are:
-| Accuracy  | Area Under Curve |
-|-----------|------------------|
-|   0.958   |     0.962        |
 
-
-## Citing
-
-```
-@inproceedings{
-    10.1145/3459930.3469529,
-    author = {Yi, Haidong and Stanley, Natalie},
-    title = {CytoSet: Predicting Clinical Outcomes via Set-Modeling of Cytometry Data},
-    year = {2021},
-    publisher = {Association for Computing Machinery},
-    address = {New York, NY, USA},
-    url = {https://doi.org/10.1145/3459930.3469529}
-}
-```
 
 
 ## Contact
 
-If you have any questions, please feel free to contact Haidong Yi (haidyi@cs.unc.edu) or push an issue on Issues Dashboard.
+If you have any questions or need further assistance, please don't hesitate to reach out to Chi-Jane Chen at chijane@cs.unc.edu, or simply submit an issue on the Issues Dashboard. Your inquiries are always welcome!
 
 
