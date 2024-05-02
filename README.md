@@ -32,11 +32,19 @@ Please download the dataset from Zenodo and follow the instruction of data struc
 
 ## Reproducing Results
 
+### Triplet Generation
+
+``dataset_RFF.ipynb`` help sample generate triplet list with different quartile by using Random Fourier Features.
+
 ### Training
 
-* Download pre-processed the datasets (see Datasets Section) and unpack them.
+* Download pre-processed datasets (see Datasets Section), unpack them and followed the file structure in Zenodo instructions.
 * In ``scripts/train/train_[Dataset].sh``, set ``bin_file`` to the path of ``train.py`` and ``gpu`` to the gpu id.
 * Start training: ``bash train_[Dataset].sh``
+
+### Output
+
+The training model will generate a csv file that include embedding vector, predict label, predict probability, true label of each sample.
 
 
 ### Testing
@@ -44,7 +52,7 @@ Please download the dataset from Zenodo and follow the instruction of data struc
 * We also provide our model configuration for each dataset in ``config/model``.
 * To run the testing, you can use the following command:
 ```
-python test.py --model checkpoints/HVTN_model.pt --config config/model/ICS/config.json --test_pkl checkpoints/test_sample.pkl
+python test.py --model checkpoints/[Dataset]_model.pt --config [config_path]/config.json --test_pkl [checkpoints_path]/test_sample.pkl
 ```
 
 
