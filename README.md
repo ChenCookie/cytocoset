@@ -110,16 +110,6 @@ The number in triplet file is matching to the index number in json file. For exa
 The training model will generate a csv file that include embedding vector, predict label, predict probability, true label of each sample.
 
 
-### Testing
-* We provide our pre-trained model on HVTN dataset and test dataset in ``checkpoints``.
-* We also provide our model configuration for each dataset in ``config/model``.
-* To run the testing, you can use the following command:
-```
-python test.py --model checkpoints/[Dataset]_model.pt --config [config_path]/config.json --test_pkl [checkpoints_path]/test_sample.pkl
-```
-
-
-
 ## Contact
 
 If you have any questions or need further assistance, please don't hesitate to reach out to Chi-Jane Chen at chijane@cs.unc.edu, or simply submit an issue on the Issues Dashboard. Your inquiries are always welcome!
